@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://c3vigjbsgmn63"]
+[gd_scene load_steps=12 format=4 uid="uid://lrviq46euwgy"]
 
 [ext_resource type="Texture2D" uid="uid://r2cv6nrib8ec" path="res://Assets/Sprites/underground_tile.png" id="1_ru4tf"]
 [ext_resource type="Texture2D" uid="uid://c1n03pjnh84wu" path="res://Assets/Sprites/ground_bllue_tile.png" id="2_6sh32"]
 [ext_resource type="Texture2D" uid="uid://3cdhawyos03l" path="res://Assets/Sprites/ground_pink_tile.png" id="3_ejswk"]
 [ext_resource type="Texture2D" uid="uid://c4015jk4jomyg" path="res://Assets/Sprites/ground_yellow_tile.png" id="4_bbk5w"]
 [ext_resource type="PackedScene" uid="uid://buw1ngag5uai4" path="res://scenes/player.tscn" id="5_conm7"]
+[ext_resource type="AudioStream" uid="uid://d1q51keu85156" path="res://OST/level_1.mp3" id="6_fcfvj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d3jkd"]
 texture = ExtResource("1_ru4tf")
@@ -41,3 +42,8 @@ position = Vector2(0, -10.95)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(6.55, 6.55)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_fcfvj")
+autoplay = true
+parameters/looping = false

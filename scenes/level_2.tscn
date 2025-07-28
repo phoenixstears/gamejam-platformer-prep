@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://c5bfrvuq5qbiv"]
+[gd_scene load_steps=2 format=3 uid="uid://c5bfrvuq5qbiv"]
+
+[ext_resource type="AudioStream" uid="uid://b1qmwly0e38q8" path="res://OST/level_2.ogg" id="1_3bmlt"]
 
 [node name="Level2_tscn" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_3bmlt")
+autoplay = true
+parameters/looping = false

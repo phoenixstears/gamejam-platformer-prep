@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8howwnipbliu"]
+[gd_scene load_steps=4 format=3 uid="uid://c8howwnipbliu"]
 
 [ext_resource type="FontFile" uid="uid://b47h0t5h0ow80" path="res://fonts/C&C Red Alert [INET].ttf" id="1_hi4w3"]
 [ext_resource type="Script" uid="uid://cqxajk8nb84s4" path="res://scenes/scroll_container.gd" id="1_spvsy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spvsy"]
+bg_color = Color(0.113725, 0.168627, 0.32549, 1)
 
 [node name="Credits" type="Node"]
 
@@ -11,7 +14,7 @@ offset_left = 1.0
 offset_right = 1157.0
 offset_bottom = 651.0
 mouse_filter = 2
-color = Color(0.0705882, 0.666667, 1, 1)
+color = Color(0.113725, 0.168627, 0.32549, 1)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 anchors_preset = 8
@@ -37,29 +40,45 @@ theme_override_constants/separation = 25
 
 [node name="Label8" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.639216, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_spvsy")
 
 [node name="Label9" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.639216, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_spvsy")
 
 [node name="Label10" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.639216, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_spvsy")
 
 [node name="Label11" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.639216, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_spvsy")
 
 [node name="Label13" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.639216, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_spvsy")
 
 [node name="Label14" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.639216, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_spvsy")
 
 [node name="Label12" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.639216, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_spvsy")
 
 [node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.639216, 0, 1)
 theme_override_fonts/font = ExtResource("1_hi4w3")
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_spvsy")
 text = "Game Development
 Maselko13
 CheeseDicer"
@@ -67,16 +86,20 @@ horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.639216, 0, 1)
 theme_override_fonts/font = ExtResource("1_hi4w3")
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_spvsy")
 text = "Graphics and Assets
 CheeseDicer"
 horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.639216, 0, 1)
 theme_override_fonts/font = ExtResource("1_hi4w3")
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_spvsy")
 text = "Soundtrack
 DM DOKURO
 F-777
@@ -85,23 +108,31 @@ horizontal_alignment = 1
 
 [node name="Label4" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.639216, 0, 1)
 theme_override_fonts/font = ExtResource("1_hi4w3")
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_spvsy")
 text = "Special Thanks
 Abgif (LF GF)"
 horizontal_alignment = 1
 
 [node name="Label5" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.639216, 0, 1)
 theme_override_fonts/font = ExtResource("1_hi4w3")
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_spvsy")
 horizontal_alignment = 1
 
 [node name="Label6" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.639216, 0, 1)
 theme_override_fonts/font = ExtResource("1_hi4w3")
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_spvsy")
 horizontal_alignment = 1
 
 [node name="Label7" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.639216, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_spvsy")
