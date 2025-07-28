@@ -40,3 +40,4 @@ tile_set = SubResource("TileSet_gnai3")
 position = Vector2(0, -10.95)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(6.55, 6.55)

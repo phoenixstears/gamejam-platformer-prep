@@ -28,8 +28,7 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dqkch")
-frame = 1
-frame_progress = 0.0132464
+frame_progress = 0.060148
 speed_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
