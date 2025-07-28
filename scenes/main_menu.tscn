@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bheyehgcgp44c"]
+[gd_scene load_steps=6 format=3 uid="uid://hfq2tgtg85nh"]
 
 [ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="FontFile" uid="uid://b47h0t5h0ow80" path="res://fonts/C&C Red Alert [INET].ttf" id="1_l6cm7"]
+[ext_resource type="AudioStream" uid="uid://c7y5ifbgm4dio" path="res://OST/main_menu.ogg" id="3_bqqt6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6cm7"]
 bg_color = Color(0.0705882, 0.666667, 1, 1)
@@ -82,6 +83,11 @@ offset_right = 1156.0
 offset_bottom = 651.0
 mouse_filter = 2
 color = Color(0.0705882, 0.666667, 1, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_bqqt6")
+autoplay = true
+parameters/looping = false
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_continue_pressed"]
