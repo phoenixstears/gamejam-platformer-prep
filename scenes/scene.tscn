@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ug0viykfwia4"]
+
+[ext_resource type="Texture2D" uid="uid://c500b63jbs5vv" path="res://lumberjack.png" id="1_s6dok"]
+
+[node name="Scene" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_s6dok")
