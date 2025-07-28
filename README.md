@@ -32,6 +32,7 @@ game:
 			- moving platforms
 			- more than 2 types of enemies
 			- collectable coins
+			- boxes that can be bumped from below that provide power-ups or coins
 		- after a level is completed, the game should transition to the level select screen. 
 		- after losing all lives, the level should be deemed as failed and the game should transition to the main menu
 		- after completing two levels or dying, the game should check if the score of the player belongs on the high-score leaderboard
