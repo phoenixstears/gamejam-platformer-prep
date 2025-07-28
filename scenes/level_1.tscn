@@ -47,3 +47,8 @@ position = Vector2(0, -10.95)
 position = Vector2(0, -24.07)
 zoom = Vector2(3.68, 3.68)
 script = ExtResource("6_fcfvj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_fcfvj")
+autoplay = true
+parameters/looping = false

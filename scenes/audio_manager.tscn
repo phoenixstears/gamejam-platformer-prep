@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcvhepaclwj0n"]
+
+[ext_resource type="AudioStream" uid="uid://c7y5ifbgm4dio" path="res://OST/main_menu.ogg" id="1_8qd8g"]
+[ext_resource type="Script" uid="uid://kdlqrily4pv6" path="res://scenes/audio_manager.gd" id="1_liach"]
+
+[node name="AudioManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_liach")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_8qd8g")
+autoplay = true
+parameters/looping = false

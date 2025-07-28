@@ -10,12 +10,12 @@ func _on_credits_pressed() -> void:
 
 
 func _on_settings_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/settings.tscn")
 
 
 func _on_continue_pressed() -> void:
-	print("new game pressed!")
+	AudioManager.stop_music()
 
 
 func _on_new_game_pressed() -> void:
-	print("new game pressed!")
+	AudioManager.stop_music()

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://24q68wwppcxw"]
+
+[ext_resource type="AudioStream" uid="uid://63ttxk14cltq" path="res://OST/level_select.ogg" id="1_3shnc"]
+
+[node name="LevelSelect" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_3shnc")
+autoplay = true
+parameters/looping = false
