@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://buw1ngag5uai4"]
+[gd_scene load_steps=6 format=3 uid="uid://buw1ngag5uai4"]
 
 [ext_resource type="Texture2D" uid="uid://bsp6kr2jtu37d" path="res://Assets/Sprites/dancer_idle.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://mc5p4pjjenxc" path="res://Scripts/player.gd" id="1_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -25,12 +26,15 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dqkch")
-frame_progress = 0.060148
+frame_progress = 0.576945
 speed_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(0, 1.5)
 polygon = PackedVector2Array(3, -7.5, -3, -7.5, -7, 6.5, 7, 6.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
