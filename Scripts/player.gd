@@ -7,6 +7,9 @@ extends CharacterBody2D
 @export var idle_animation_speed = 0.5
 
 const GRAVITY = -98
+
+var jumping = false
+var can_jump = true
 @onready var _animated_sprite = $AnimatedSprite2D
 
 func _process(_delta):
@@ -28,16 +31,25 @@ func _process(_delta):
 func _physics_process(delta: float) -> void:
 	var move_vec = Vector2.ZERO
 	velocity.x = 0
-
+	# TODO: make jump feel good, add coyote time and make check for if already past max point when jumping
+	if is_on_floor():
+		can_jump = true
+	
 	if Input.is_action_pressed("right"):
 		move_vec = speed*Vector2.RIGHT
 		
 	elif Input.is_action_pressed("left"):
 		move_vec = speed*Vector2.LEFT
 		
-	if is_on_floor() && Input.is_action_just_pressed("jump"):
+	if can_jump && Input.is_action_just_pressed("jump"):
 		move_vec += jump_strength*Vector2.UP
+		can_jump = false
 	
+	if !can_jump && Input.is_action_just_released("jump"):
+		velocity.y = 0
+	
+	print("jumping: " + str(jumping))
+	print("can_jump: " + str(can_jump))
 
 	move_vec += GRAVITY*delta*Vector2.UP
 	velocity += move_vec
