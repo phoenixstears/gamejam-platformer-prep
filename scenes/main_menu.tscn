@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://hfq2tgtg85nh"]
 
-[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="Script" uid="uid://cnoo6nl7rdoit" path="res://scenes/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="FontFile" uid="uid://b47h0t5h0ow80" path="res://fonts/C&C Red Alert [INET].ttf" id="1_l6cm7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6cm7"]

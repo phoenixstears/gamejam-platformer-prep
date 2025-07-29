@@ -22,4 +22,4 @@ Global="*res://global.gd"
 
 [display]
 
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"

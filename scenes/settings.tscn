@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxbexhxl6dvjn"]
+[gd_scene load_steps=9 format=3 uid="uid://bxbexhxl6dvjn"]
 
 [ext_resource type="FontFile" uid="uid://b47h0t5h0ow80" path="res://fonts/C&C Red Alert [INET].ttf" id="1_5p8wc"]
+[ext_resource type="Script" uid="uid://bewq4qbwhlch" path="res://scenes/settings.gd" id="1_gis3k"]
 [ext_resource type="Script" uid="uid://ku0gbefdaoat" path="res://scenes/h_slider.gd" id="2_r6d6q"]
 [ext_resource type="Script" uid="uid://b6bwmnjqyj3rc" path="res://scenes/button.gd" id="3_6wm04"]
+[ext_resource type="Script" uid="uid://cswo6h2h1lav" path="res://scenes/option_button.gd" id="3_f4mfi"]
+[ext_resource type="Script" uid="uid://dn5o6v2sc8ti1" path="res://scenes/h_slider_2.gd" id="4_83j8s"]
+[ext_resource type="Script" uid="uid://dgsq54bytpb2f" path="res://scenes/option_button_2.gd" id="4_es4n0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6d6q"]
 bg_color = Color(0.113725, 0.168627, 0.32549, 1)
@@ -14,9 +18,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_gis3k")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
+layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 651.0
 mouse_filter = 2
@@ -67,11 +73,12 @@ theme_override_fonts/font = ExtResource("1_5p8wc")
 theme_override_font_sizes/font_size = 45
 text = "SFX volume"
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/HBoxContainer2"]
+[node name="HSlider2" type="HSlider" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 value = 85.0
+script = ExtResource("4_83j8s")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -85,7 +92,7 @@ theme_override_fonts/font = ExtResource("1_5p8wc")
 theme_override_font_sizes/font_size = 45
 text = "Resolution"
 
-[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer3"]
+[node name="OptionButton22" type="OptionButton" parent="VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -99,6 +106,7 @@ popup/item_2/text = "1600x900"
 popup/item_2/id = 2
 popup/item_3/text = "1980x1050"
 popup/item_3/id = 3
+script = ExtResource("3_f4mfi")
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -112,7 +120,7 @@ theme_override_fonts/font = ExtResource("1_5p8wc")
 theme_override_font_sizes/font_size = 45
 text = "Display mode"
 
-[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer4"]
+[node name="OptionButton2" type="OptionButton" parent="VBoxContainer/HBoxContainer4"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -122,6 +130,7 @@ popup/item_0/text = "Fullscreen"
 popup/item_0/id = 0
 popup/item_1/text = "Windowed"
 popup/item_1/id = 1
+script = ExtResource("4_es4n0")
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -134,4 +143,7 @@ text = "Back"
 script = ExtResource("3_6wm04")
 
 [connection signal="value_changed" from="VBoxContainer/HBoxContainer/HSlider" to="VBoxContainer/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/HBoxContainer2/HSlider2" to="VBoxContainer/HBoxContainer2/HSlider2" method="_on_value_changed"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer3/OptionButton22" to="VBoxContainer/HBoxContainer3/OptionButton22" method="_on_item_selected"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer4/OptionButton2" to="VBoxContainer/HBoxContainer4/OptionButton2" method="_on_item_selected"]
 [connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]
