@@ -44,7 +44,8 @@ tile_set = SubResource("TileSet_gnai3")
 position = Vector2(0, -10.95)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(6.55, 6.55)
+position = Vector2(0, -24.07)
+zoom = Vector2(3.68, 3.68)
 script = ExtResource("6_fcfvj")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
